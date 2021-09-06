@@ -1,0 +1,43 @@
+body,main {
+    min-width : 250px;
+}
+header{
+    border: 1px solid green;
+    background : radial-gradient(green, skyblue);
+    color: darkred;
+    text-shadow: 12px 2px 5px #555;
+}
+main{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+main section{
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main section div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main section div a{
+    margin: 2px 0;
+    border: 1px solid brown;
+    width : 250px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4px;
+    text-decoration: none;
+}
+
+main section div a img{
+    width : 200px;
+}

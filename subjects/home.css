@@ -1,0 +1,79 @@
+body{
+    min-width : 300px;
+    display : grid;
+    place-items : center;
+}
+nav{
+    width : 100%;
+}
+main{
+    margin-top: 10px;
+    display : flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid green; */
+}
+main article{
+    --color1 : #008;
+    --color2 : #00f;
+    --color3: #00a;
+    --color4 : #55c;
+
+    margin: 10px 0;
+    min-width : 315px;
+    width : 49%;
+    min-height : 200px;
+    border-radius : 10px;
+    /* border: 1px solid red; */
+}
+main article div img {
+    width : 250px;
+    border-radius : 20px;
+}
+main article div {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+main article div:last-child{
+    width : 50%;
+    min-height : 200px;
+    height : 100%;
+    flex-direction : column;
+    justify-content: space-between;
+    color : var(--color3);
+}
+main article div .btn{
+    width : 100%;
+    background : linear-gradient(to left, var(--color1), var(--color2));
+    color : white;
+    border : 1px solid var(--color1);
+    font-weight : 750;
+    border-radius : 30px;
+}
+main article div .btn:hover{
+    color : white;
+    animation: animate-color 2s  infinite  linear;
+}
+main article div .btn:active{
+    transform: scale(0.99);
+}
+
+@keyframes animate-color {
+    0% {
+        background : linear-gradient(to left, var(--color1), var(--color2), var(--color3) , var(--color4));
+    }
+    25%{
+        background : linear-gradient(to left, var(--color4), var(--color1), var(--color2), var(--color3));
+    }
+    50% {
+        background : linear-gradient(to left , var(--color3) ,var(--color4), var(--color1), var(--color2));
+    }
+    75%{
+        background : linear-gradient(to left, var(--color2), var(--color3) ,var(--color4), var(--color1));
+    }
+    100%{
+        background : linear-gradient(to left, var(--color1), var(--color2), var(--color3) , var(--color4));
+    }
+}

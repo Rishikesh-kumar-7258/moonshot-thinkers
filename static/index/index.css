@@ -41,58 +41,6 @@ footer {
     /* border: 1px solid green; */
 }
 
-footer section {
-    min-width: 250px;
-    max-width: 400px;
-    width: 80%;
-    height: 300px;
-    border-radius: 20px;
-    perspective: 1000px;
-    cursor: pointer;
-    /* border: 1px solid red; */
-    background-color: transparent;
-}
-
-footer section:hover .row {
-    transform: rotateY(180deg) translate(-3%);
-}
-
-footer section .row {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-    transform: translate(3%);
-}
-
-footer section .row .container {
-    transform: rotateY(180deg);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-}
-
-footer section .row .col {
-    position: absolute;
-    backface-visibility: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-footer section div {
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-footer section img {
-    height: 250px;
-    border-radius: 40px;
-}
-
 /* Sweep To Right */
 .hvr-sweep-to-right {
     display: inline-block;

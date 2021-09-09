@@ -10,19 +10,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./static/index/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/index/index.css">
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="nav_top" class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
         <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -31,37 +30,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hobbies</a>
+                        <a class="nav-link" href="../subjects/home.html">Syllabus Notes</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Subjects
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Mathematics</a></li>
-                            <li><a class="dropdown-item" href="#">Physics</a></li>
-                            <li><a class="dropdown-item" href="#">Chemistry</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hobby</a>
                     </li>
+
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" method="GET" action="https://www.google.com/search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                    <input class="btn btn-outline-success" type="submit">Search</input>
                 </form>
             </div>
         </div>
+        </div>
     </nav>
 
-    <main class="my-5">
+    <main class="my-3">
         <section class="container-fluid row text-center p-3 d-flex gap-3"></section>
         <section class="container-fluid row text-center p-3 d-flex gap-3"></section>
     </main>
 
-    <footer class="container-fluid text-center bg-dark p-5 fw-bolder" style="color : white">
+    <footer class="container-fluid text-center bg-dark p-5 fw-bolder">
         <!-- <section class="row"></section> -->
         This is an educational website.
     </footer>

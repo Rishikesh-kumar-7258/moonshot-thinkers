@@ -3,65 +3,32 @@ document.title = `Subject | ${SUBJECT_NAME}`;
 
 document.querySelector('header').innerHTML += `<h1 class="fw-bolder">${SUBJECT_NAME}</h1>`;
 
-// class Books{
-
-//     constructor(name, img_src, buy_link){
-//         this.name = name;
-//         this.img_src = img_src;
-//         this.buy_link = buy_link;
-//     }
-// }
-
-// let Mathematics = [];
-// Mathematics.push(new Books("Higher Engineering Mathematics", "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg", "https://www.amazon.in/Higher-Engineering-Mathematics-B-S-Grewal/dp/8193328493"));
-
-// // switch (SUBJECT_NAME) {
-// //     case "Mathematics":
-// //         show_subject(Mathematics);
-// //         break;
-// //     case "Physics":
-// //         show_subject(Physics);
-// //         break;
-// //     case "BEEE":
-// //         show_subject(Physics);
-// //         break;
-// //     case "Physics":
-// //         show_subject(Physics);
-// //         break;
-// //     case "Physics":
-// //         show_subject(Physics);
-// //         break;
-
-// //     default:
-// //         break;
-// // }
-
 // variable which contains all the books
 BOOKS = {
-    "Mathematics" : {
-        "1" : {
+    "Mathematics" : [
+        {
                 "name" : "Higher Engineering Mathematics",
                 "img_src" : "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg",
                 "buy_link" : "https://www.amazon.in/Higher-Engineering-Mathematics-B-S-Grewal/dp/8193328493"
             },
-        "2" : {
+        {
                 "name" : "Higher Engineering Mathematics",
                 "img_src" : "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg",
                 "buy_link" : "#"
             },
-    },
-    "Physics" : {
-        "1" : {
+        ],
+    "Physics" :[
+        {
             "name" : "Higher Engineering Mathematics",
             "img_src" : "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg",
             "buy_link" : "#"
         },
-        "2" : {
+        {
             "name" : "Higher Engineering Mathematics",
             "img_src" : "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg",
             "buy_link" : "#"
         },
-    }
+    ]
 }
 
 // variable which contains all the tutorial videos
@@ -79,7 +46,7 @@ TUTORIALS = {
 for (let i = 0; i < 2; i++)
 {
     book = BOOKS[`${SUBJECT_NAME}`][`${i+1}`];
-    document.getElementById('book_section').innerHTML += books(book["img_src"], book["name"], book["buy_link"]);
+    document.querySelector('#book_section .books').innerHTML += books(book["img_src"], book["name"], book["buy_link"]);
 }
 
 // Addding tutorials to the page

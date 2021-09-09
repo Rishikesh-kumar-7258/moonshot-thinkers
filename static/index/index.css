@@ -38,11 +38,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color : white;
     /* border: 1px solid green; */
 }
 
 /* Sweep To Right */
-.hvr-sweep-to-right {
+/* .hvr-sweep-to-right {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -84,4 +85,4 @@ footer {
 .hvr-sweep-to-right:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-}
+} */

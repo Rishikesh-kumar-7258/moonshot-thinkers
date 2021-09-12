@@ -1,10 +1,10 @@
-SUBJECT_NAME = sessionStorage.getItem('subject');
+const SUBJECT_NAME = sessionStorage.getItem('subject');
 document.title = `Subject | ${SUBJECT_NAME}`;
 
 document.querySelector('header').innerHTML += `<h1 class="fw-bolder">${SUBJECT_NAME}</h1>`;
 
 // variable which contains all the books
-BOOKS = {
+const BOOKS = {
     "Mathematics": [
         {
             "name": "Higher Engineering Mathematics",
@@ -43,11 +43,23 @@ BOOKS = {
             "img_src": "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg",
             "buy_link": "#"
         },
-    ]
+    ],
+    "C Programming": [
+        {
+            "name": "Higher Engineering Mathematics",
+            "img_src": "../static/images/subject_photos/mathematics-png.jpg",
+            "buy_link": "#"
+        },
+        {
+            "name": "Higher Engineering Mathematics",
+            "img_src": "https://images-na.ssl-images-amazon.com/images/I/61AnHkiZtzL.jpg",
+            "buy_link": "#"
+        },
+    ],
 }
 
 // variable which contains all the tutorial videos
-TUTORIALS = {
+const TUTORIALS = {
     "Mathematics": [
         {
             "link": "https://www.youtube.com/playlist?list=PLs5_Rtf2P2r5Z9eX1nZ1BwjYCVBQjibN8",
@@ -58,6 +70,15 @@ TUTORIALS = {
 }
 
 // Adding books to the pages
+const RenderCard = (img, title, extra=null) => 
+{
+    return (
+        `<div class="vpCard">
+            <img src=${img} alt=${title} class="img-fluid">
+            <p class="text-center">${title}</p>
+        </div>`
+    )
+}
 const show_objects = 4;
 let book_st = 0;
 
@@ -68,7 +89,7 @@ const render_books = (book_st) =>
     for (let i = book_st; i < book_st + show_objects; i++)
     {
         let book = BOOKS[SUBJECT_NAME][i];
-        document.querySelector('#book_section .books').innerHTML += books(book["img_src"], book["name"], book["buy_link"]);
+        document.querySelector('#book_section .books').innerHTML += RenderCard(book["img_src"], book["name"], book["buy_link"]);
     
     }
 }

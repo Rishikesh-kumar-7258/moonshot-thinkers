@@ -27,6 +27,9 @@ SUBJECTS.push(info_tech);
 const eng_graphics = new Subject("Engineering Graphics", "../static/images/subject_photos/english1.png")
 SUBJECTS.push(eng_graphics);
 
+const C_programming = new Subject("C Programming", "../static/images/subject_photos/english1.png")
+SUBJECTS.push(C_programming);
+
 SUBJECTS.forEach(e => {
     console.log(e);
 })

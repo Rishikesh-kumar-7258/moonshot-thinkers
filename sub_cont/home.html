@@ -23,56 +23,42 @@
 
     <header class="container-fluid text-center p-3"></header>
 
-    <main class="containuer-fluid">
+    <main class="container-fluid my-5">
 
-        <section class="container-fluid ">
-
-            <h3>
-                <span>Recommended Books</span>
-                <span><a href="#" class="fs-6 text-decoration-none">see more</a></span>
-            </h3>
-            <div class="container-fluid displayer" id="book_section">
-                <div class="arrow left"> < </div>
-                <div class="books"></div>
-                <div class="arrow right">></div>
+        <!-- Recommended books  -->
+        <div class="row border">
+            <div class="col-12 d-flex align-items-center justify-content-between border-bottom border-primary border-4 py-3">
+                <span>Recommened Books</span> <span><a href="#">see more</a></span>
             </div>
-
-        </section>
-
-        <section class="container-fluid ">
-
-            <h3>
-                <span>Recommended Tutorials</span>
-                <span><a href="#" class="fs-6 text-decoration-none">see more</a></span>
-            </h3>
-            <div class="container-fluid displayer" id="playlist_section">
-                <div class="arrow left"> < </div>
-                <div class="tutorials"></div>
-                <div class="arrow right">></div>
+            <div class="col-12">
+                <div class="row py-3 text-center">
+                    <div class="col-1 fw-bolder fs-1 arrow left"><</div>
+                    <div class="col-10 books"></div>
+                    <div class="col-1 fw-bolder fs-1 arrow right">></div>
+                </div>
             </div>
+        </div>
 
-        </section>
-
-        <section class="container-fluid ">
-
-            <h3>
-                <span>Notes</span>
-                <span><a href="#" class="fs-6 text-decoration-none">see more</a></span>
-            </h3>
-            <div class="container-fluid displayer" id="Notes_section">
-                <div class="arrow left"> < </div>
-                <div class="notes"></div>
-                <div class="arrow right">></div>
+        <!-- Recommended Tutorials  -->
+        <div class="row border">
+            <div class="col-12 d-flex align-items-center justify-content-between border-bottom border-primary border-4 py-3">
+                <span>Recommened Tutorials</span> <span><a href="#">see more</a></span>
             </div>
-
-        </section>
-
-        <footer class="container-fluid text-center bg-dark p-5 fw-bolder">
-            <!-- <section class="row"></section> -->
-            This is an educational website.
-        </footer>
+            <div class="col-12">
+                <div class="row py-3 text-center">
+                    <div class="col-1 fw-bolder fs-1 arrow left"><</div>
+                    <div class="col-10 tutorials"></div>
+                    <div class="col-1 fw-bolder fs-1 arrow right">></div>
+                </div>
+            </div>
+        </div>
 
     </main>
+
+    <footer class="container-fluid text-center bg-dark p-5 fw-bolder">
+        <!-- <section class="row"></section> -->
+        This is an educational website.
+    </footer>
 </body>
 
 <script src="home.js"></script>

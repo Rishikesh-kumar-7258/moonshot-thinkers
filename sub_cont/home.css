@@ -7,92 +7,26 @@ header {
     background: radial-gradient(green, skyblue);
     color: darkred;
     text-shadow: 5px 2px 5px #555;
-}
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-}
-main section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-main section h3
-{
-    display: flex;
-    justify-content: space-between;
-    width : 100%;
-    padding-bottom: 0;
-    border-bottom: 2px solid blue;
-    margin: 20px;
-}
-main section div {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-main section div a {
-    margin: 2px 0;
-    border: 1px solid brown;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 4px;
-    text-decoration: none;
-}
-
-main section div a img {
-    width: 200px;
-}
-
-.displayer {
-    display: grid;
-    grid-template-columns: 80px 1fr 80px;
-    border: 1px solid blue;
-    position: relative;
-    height: 350px;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.arrow {
-    background-color: lightblue;
-    color: #555;
-    font-size: 72px;
-    font-weight: 100;
-    height: 100%;
-    cursor: pointer;
-    transition: all 0.3s linear;
-}
-.arrow:hover {
-    box-shadow: 1px 1px 4px 4px #888;
+    text-align: center;
 }
 
 .books{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display : flex;
+    align-items : center;
     justify-content: space-around;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    border : 1px solid rebeccapurple;
-    height : 350px;
+}
+.arrow{
+    display : grid;
+    place-items : center;
+    cursor : pointer;
+    background : #345345;
 }
 
 .vpCard{
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    height : 80%;
+    border : 1px solid red;
+    margin : 0;
+    padding : 0;
     width : 200px;
-    place-items: center;
-    border : 1px solid green;
 }
 
 footer{

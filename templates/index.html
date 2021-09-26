@@ -1,0 +1,26 @@
+{% include 'base.html' %}
+
+{% block title %}
+<title>Home | Quality Education</title>
+{% endblock title %}
+
+{% block cssfile %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock cssfile %}
+
+{% block body %}
+
+<main class="my-3">
+    <section class="container-fluid row text-center p-3 d-flex gap-3"></section>
+    <section class="container-fluid row text-center p-3 d-flex gap-3"></section>
+</main>
+
+<footer class="container-fluid text-center bg-dark p-5 fw-bolder">
+    This is an educational website.
+</footer>
+
+{% endblock body %}
+
+{% block jsfile %}
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock jsfile %}

@@ -1,12 +1,9 @@
 {% include 'base.html' %}
 
-{% block title %}
+{% block head %}
 <title>Hobby</title>
-{% endblock title %}
-
-{% block cssfile %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/hobby.css') }}">
-{% endblock cssfile %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hobby.css') }}">
+{% endblock head %}
 
 {% block body %}
 <header id="header" class="container-fluid text-center border shadow">

@@ -1,12 +1,9 @@
 {% include 'base.html' %}
 
-{% block title %}
+{% block head %}
 <title>Home | Quality Education</title>
-{% endblock title %}
-
-{% block cssfile %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-{% endblock cssfile %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock head %}
 
 {% block body %}
 

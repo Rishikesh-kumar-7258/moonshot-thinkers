@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
@@ -21,8 +22,12 @@ class Hobbies(db.Model):
     name = db.Column(db.String(200), nullable=False)
     course_link = db.Column(db.String(200), nullable=False)
     img = db.Column(db.String(200), nullable=False)
-    subject = db.Column(db.String(200), nullable=False)
+    topic = db.Column(db.String(200), nullable=False)
     desc = db.Column(db.String(500))
+    rating = db.Column(db.Float)
+    duration = db.Column(db.Integer)
+    time = db.Column(db.DateTime, default=datetime.utcnow)
+
 
 class Admins(db.Model):
     id = db.Column(db.Integer,primary_key=True)

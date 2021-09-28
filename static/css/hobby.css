@@ -1,22 +1,25 @@
-body{
-    min-width : 400px;
+.content{
+    display : flex;
+    align-items : center;
+    justify-content: space-around;
 }
-.card img{
-    width : 150px;
-    border-radius: 20px;
-}
-main > h2{
-    margin: 10px 0;
+.arrow{
+    display : grid;
+    place-items : center;
+    cursor : pointer;
+    background : #345345;
 }
 
-main .row .col{
-    min-width : 400px;
-    background-color: lightgreen;
-    border-radius: 20px;
-    padding: 5px;
-    cursor: pointer;
-    transition : transform linear 0.5s;
+.arrow:active{
+    transform : scale(0.9);
 }
-main .row .col:hover{
-    transform : scale(1.05);
+
+.cannot_work{
+    background : #676767;
+}
+
+.vpCard{
+    border : 1px solid brown;
+    width : 200px;
+    font-weight : bolder;
 }

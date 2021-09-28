@@ -3,6 +3,7 @@
 {% block head %}
 <title>Hobby</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/hobby.css') }}">
+</style>
 {% endblock head %}
 
 {% block body %}
@@ -12,124 +13,87 @@
         resources which are freely available for those who seek.</p>
 </header>
 
-<main class="container-fluid">
-    <h2 class="text-center bg-info shadow">All Recommonded Resources</h2>
-
-    <div class="row row-cols-4 gap-3 mx-auto border justify-content-center">
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Apni Kaksha(C++)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ" target="_blank">Learn</a>
+<div class="container mt-5">
+    <div class="row justify-content-between">
+        <div class="col-md-3 col-sm-12 bg-dark d-flex flex-column align-items-start">
+            <div class="btn-group dropend my-2">
+                <button type="button" class="btn btn-secondary">
+                    Ratings
+                </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a href="#" class="dropdown-item">First</a></li>
+                    <li><a href="#" class="dropdown-item">Second</a></li>
+                    <li><a href="#" class="dropdown-item">Third</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropend my-2">
+                <button type="button" class="btn btn-secondary">
+                    Time
+                </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a href="#" class="dropdown-item">First</a></li>
+                    <li><a href="#" class="dropdown-item">Second</a></li>
+                    <li><a href="#" class="dropdown-item">Third</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropend my-2">
+                <button type="button" class="btn btn-secondary">
+                    Duration
+                </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a href="#" class="dropdown-item">First</a></li>
+                    <li><a href="#" class="dropdown-item">Second</a></li>
+                    <li><a href="#" class="dropdown-item">Third</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropend my-2">
+                <button type="button" class="btn btn-secondary">
+                    Topics
+                </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a href="#" class="dropdown-item">First</a></li>
+                    <li><a href="#" class="dropdown-item">Second</a></li>
+                    <li><a href="#" class="dropdown-item">Third</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Code With Harry(C)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/watch?v=9-GSIN8s5Eo&list=PLu0W_9lII9ahSEQv6cHtu8JBXNgK2_QMX"
-                target="_blank">Learn</a>
+        <div class="col-md-8 col-sm-12 border bg-dark shadow text-white">
+            {% for i in range(5) %}
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between">
+                        <p>C++</p> 
+                        <a href="#">see more</a>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-1 d-flex justify-content-center align-items-center arrow"><</div>
+                            <div class="col-10 d-flex justify-content-center align-items-center content">subjects</div>
+                            <div class="col-1 d-flex justify-content-center align-items-center arrow">></div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Code With Harry(Web Dev)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/watch?v=9DxdE__m_LA&list=PLu0W_9lII9aiQiOwthuSvinxoflmhRxM3"
-                target="_blank">Learn</a>
-        </div>
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Code With Harry(C++)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/watch?v=j8nAHeVKL08&list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL"
-                target="_blank">Learn</a>
-        </div>
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Love Babbar</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/watch?v=AgrV4QHZKl4&list=PL4PCksYQGLJOcaPLgeMFaxaHigPFjBuTG"
-                target="_blank">Learn</a>
-        </div>
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Logo Designing</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/watch?v=NfkQeOSmIMY&list=PLW-zSkCnZ-gDer-VZlBbe1f9-G0zNYdtg"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Anuj Bhaiya (DSA)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLUcsbZa0qzu3yNzzAxgvSgRobdUUJvz7p"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>Anuj Bhaiya (Android Dev)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLUcsbZa0qzu3Mri2tL1FzZy-5SX75UJfb"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>cs50 Lectures</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>cs50 Web dev</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>cs50 AI</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>code with harry(git)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>code with harry(python)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME"
-                target="_blank">Learn</a>
-        </div>
-
-        <div class="card col align-items-center">
-            <img src="../static/images/images.png" alt="Image">
-            <h4>code with harry(Learn in one video)</h4>
-            <a class="btn btn-primary fw-bolder container-fluid" role="button"
-                href="https://www.youtube.com/playlist?list=PLu0W_9lII9ahKZ42vg2w9ERPmShYbYAB7"
-                target="_blank">Learn</a>
-        </div>
-
     </div>
-
-    <a href="#header" class="container-fluid btn btn-primary mx-auto fw-bolder" role="button">Back to top</a>
-</main>
-
+</div>
 {% endblock body %}
 
 {% block jsfile %}
-    <script src="{{ url_for('static', filename='js/hobby.js') }}"></script>
+<script src="{{ url_for('static', filename='js/hobby.js') }}"></script>
 {% endblock jsfile %}

@@ -1,22 +1,22 @@
+let show_objects = parseInt($(".content").width() / 200);
+let book_st = 0;
 
-class Book{
-    constructor(name, img_src, buy_link)
-    {
-        this.name = name;
-        this.img_src = img_src;
-        this.buy_link = buy_link;
-    }
-};
-
-BOOKS_LIST = [];
-
-
-function books(img_src, name, buy_link)
-{
-    let child = `<a href="${buy_link}" data-book="${name}" class="sub_book">
-                    <img src="${img_src}" alt="${name}">
-                    <h6 class="fw-bolder text-center">${name}</h6>
-                </a>`;
+window.addEventListener("resize", function(){
     
-    return child;
-}
+    show_objects = parseInt($(".content").width() / 200);
+    render_books(book_st);
+})
+
+$('.right').click(() => 
+{
+    book_st = book_st + show_objects > BOOKS[SUBJECT_NAME].length ? book_st : book_st + show_objects;
+    render_books(book_st);
+})
+$('.left').click(() => 
+{
+    book_st -= show_objects;
+    book_st = (book_st < 0) ? 0 : book_st;
+    render_books(book_st);
+})
+
+render_books(book_st)
